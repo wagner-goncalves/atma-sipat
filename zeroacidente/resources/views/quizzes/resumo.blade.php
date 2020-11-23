@@ -7,7 +7,7 @@
             <div class="pull-left pb-2">
                 <div class="titulo-destaque">
                     <i class="fas fa-vote-yea"></i>
-                    Quizz finalizado!
+                    Quiz finalizado!
                 </div>                 
             </div>
             
@@ -20,7 +20,7 @@
                 <div class="col-sm-12">
                     <h2>Resultado final</h2>
                     <h3>Você acertou {{$resumoFinal->corretas}} de {{$resumoFinal->perguntas}} perguntas.</h3>
-                    <p>Agradecemos a sua participação no quizz do Programa Zero Acidente - SIPAT 2020
+                    <p>Agradecemos a sua participação no quiz do Programa Zero Acidente - SIPAT 2020
                         <br />Aguarde novas instruções sobre a campanha na unidade e lembre-se de prezar pela sua segurança e dos demais colaboradores no ambiente de trabalho.</p>
                 </div>
             </div>
@@ -37,8 +37,10 @@
                 <div class="row">
                     <div class="col-sm-12 col-lg-4 col-xl-4 align-self-center">
                         <p>
-                            {{$resumo->nome}}<br />
-                            <span class="small">Pergutas: {{$resumo->perguntas}}. Respostas: {{$resumo->respostas}}. Acertos: {{$resumo->corretas}}.</span>
+                            {!!$resumo->nome!!}<br />
+                            <span class="small"><b>Pergutas:</b> {{$resumo->perguntas}}. 
+                                <b>Respostas:</b> {{$resumo->respostas}}. 
+                                <b>Acertos:</b> {{$resumo->corretas}}.</span>
                         </p>
                         
                     </div>
