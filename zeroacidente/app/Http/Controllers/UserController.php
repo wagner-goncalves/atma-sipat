@@ -37,11 +37,11 @@ class UserController extends Controller
                     ->paginate(2);
     
             } else {
-                $data = User::sortable()->orderBy('created_at', 'desc')->paginate(2);
+                $data = User::sortable()->orderBy('created_at', 'desc')->paginate(10);
             }
     
             return view('users.index',compact('data', 'filter'))
-                ->with('i', (request()->input('page', 1) - 1) * 2);            
+                ->with('i', (request()->input('page', 1) - 1) * 10);            
     }
     
     /**

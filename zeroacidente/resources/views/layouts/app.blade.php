@@ -68,7 +68,7 @@
                     </ul>
                 </div>
                 @if(Request::path() == 'quizzes/responder' && isset($quizz))
-                <h4 class="pt-4 text-right">{{ $quizz->nome }}</h4>
+                <h4 class="pt-4 text-right">{!! $quizz->nome !!}</h4>
                 @endif
             </div>
           </nav>
@@ -106,7 +106,7 @@
             <div class="container-fluid bg-banner">
                 <div class="row">
                     <div class="col-md-12 py-3 px-3 text-white font-weight-bold text-center">
-                        {{date("Y")}} Todos os direitos reservados.
+                        Usiminas © {{date("Y")}} | Todos os direitos reservados.
                     </div>
                 </div>
             </div>

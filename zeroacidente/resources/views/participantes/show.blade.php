@@ -63,6 +63,32 @@
                     </div>
                 </div>
             </div>
+
+
+            <table class="table table-sm table-bordered small">
+                <thead>
+                  <tr>
+                    <th scope="col">Quiz</th>
+                    <th scope="col">Pergunta</th>
+                    <th scope="col">Respondido</th>
+                    <th scope="col">Correta?</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                @foreach ($respostas as $resposta)
+                    <tr>
+                        <th  scope="row">{!!$resposta->nome!!}</th>
+                        <td>{{$resposta->enunciado}}</td>
+                        <td>{{$resposta->texto}}</td>
+                        <td>{{$resposta->correta == 0 ? "Não" : "SIM"}}</td>
+                    </tr>
+                @endforeach
+                </tbody>
+              </table>
+
+
+
         </div>
     </div>
 @endsection

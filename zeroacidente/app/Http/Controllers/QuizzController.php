@@ -39,6 +39,7 @@ class QuizzController extends Controller
         if(!$quizz) return view('quizzes.aguarde');
 
         $pergunta = $quizz->proximaPergunta(Auth::id(), $quizz->id);
+        
         if(!$pergunta) return redirect('quizzes/resumo');
 
         $respostas = $pergunta->respostas()->get();
@@ -94,7 +95,7 @@ class QuizzController extends Controller
 
         $mensagem = 'Parabéns, você acertou a resposta!';
         if(!$respostaEstaCorreta){
-            $mensagem = 'Que pena! A resposta corretá é a letra ' . $respostaCorreta->ordem . ": " . $respostaCorreta->texto;
+            $mensagem = 'Que pena! A resposta correta é:<br/> <b>Letra ' . $respostaCorreta->ordem . ": " . $respostaCorreta->texto . "</b>";
         } ;
 
         

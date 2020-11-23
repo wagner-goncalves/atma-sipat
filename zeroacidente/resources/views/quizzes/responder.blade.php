@@ -86,7 +86,7 @@
                     $('#modal-enunciado').text(res.data.avaliacao.enunciado);
                     if(!res.data.avaliacao.correct) $('#modal-correct').html('<div><i class="fas fa-frown fa-3x pb-2"></i></div>');
                     else $('#modal-correct').html('<div><i class="fas fa-smile-beam fa-3x pb-2"></i></div>');
-                    $('#modal-message').text(res.data.avaliacao.message);
+                    $('#modal-message').html(res.data.avaliacao.message);
 
                     if(res.data.avaliacao.ultimaResposta){
                         $('#btn-proximo').html('Finalizar questionário');

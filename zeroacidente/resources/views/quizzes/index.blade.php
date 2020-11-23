@@ -19,7 +19,7 @@
                     <p>
 
                     @if ($maisQuiz)
-                    <a class="btn btn-success rounded-pill pr-4 pl-4 text-dark font-weight-bold text-uppercase" href="{{ route('quizzes.responder') }}"> Responder o quizz do dia</a>    
+                    <a class="btn btn-success rounded-pill pr-4 pl-4 text-dark font-weight-bold text-uppercase" href="{{ route('quizzes.responder') }}"> Responder o quiz do dia</a>    
                     @else
                     <a class="btn btn-success rounded-pill pr-4 pl-4 text-dark font-weight-bold text-uppercase" href="{{ route('quizzes.responder') }}"> Ver o seu resultado</a>    
                     @endif
